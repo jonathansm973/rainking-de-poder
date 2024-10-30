@@ -1,0 +1,174 @@
+html{
+        font-family: "Protest Revolution", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+}
+
+img{
+    max-width: 100%;
+}
+
+th{
+    text-transform: uppercase;
+}
+.container{
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.content{
+    max-width: 960px;
+    
+    width: 100%;
+    height: 80vh;
+    background-color: white;
+    /*box-shadow: ; sombra horizontal, vertical, desenfoque, amplitud, color*/
+    box-shadow: 0 3px 30px #000000dd;
+    border-radius: 4px;
+    position: relative; /*DESAPARECE CON EL SCROL*/
+      
+    overflow: scroll; /*controla lo que sucede con el contenido que es 
+    demasiado grande para caber en un area*/
+}
+
+.content{
+    padding: 1em;
+}
+td{
+    display: block;
+    width: 100%;
+}
+td:nth-of-type(1){
+ font-size: 1.5em; 
+ font-weight: bold;
+ color: #203A43;  
+
+}
+th{
+    display: none;
+}
+
+h1{
+    text-align: center;
+    padding-bottom: 1em;
+}
+.tache{
+    position: absolute; /*La posision es relativa al contenedor 
+    mas cercano que este posisionado si no hat alguno se posisiona 
+    respecto al viewport TAMBIEN DESAPARECE CON EL SCROLL*/
+    right: 1em;
+    top: 1em; 
+    /*position: fixed; NO ES AFECTADO POR EL SCROLL*/
+    /*position: sticky; Es una combionacion enstre relative y fixed*/
+}
+.close{
+    border-radius: 50px;
+    background-color: #203A43;
+    color: white;
+    height: 40px;
+    width: 40px;
+    display:inline-block;
+    box-shadow: 0 3px 20px #000000dd;
+    cursor: pointer; /*cambia el cursor a puentero*/
+    display: flex;
+    align-items: center; /*centra verticalmente*/
+    justify-content: center; /*centra horizontalmente*/
+
+}
+.parrafo{
+    line-height: 1.8em; /*interlineado*/
+    font-weight: 200;
+}
+a{
+    color: #a01081;
+    text-decoration: none;
+}
+.table{ /* la tabla ocupa el 100% del espacio
+    sin bordes*/
+    width: 100%;
+    border-spacing: 0;
+
+}
+
+.table td, .table th{/* dos clases para un mismo elemento separad por coma
+     */
+    padding: 1em;
+    text-align:left;
+}
+.table tr:nth-child(even){ /*seudo clase even es para que una tabla se
+    vea de un color y otro*/
+    background-color: #f3cbea;
+}
+.fa-star, .fa-star-o{ /*estrella vacia*/
+    color: rgba(237, 218, 45, 0.936);
+}
+.title{
+    
+    /*border-bottom-style: solid;
+    border-width: 2px;
+    border-color: rgba(16, 158, 187, 0.79);*/
+    border-bottom: solid 2px rgba(16, 158, 187, 0.79); /*Shorthan properties*/
+    padding-bottom: 1em;
+    font-size: 2em;
+}
+
+.position{
+    background-color: rgba(16, 158, 187, 0.79);
+    color: white;
+    padding:.5em;
+    border-radius: 4px;
+    margin-right: 0.5em;
+    
+}
+.parrafo1{
+    color:#f3caea;
+    font-family: "Protest Riot", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.3em;
+    display: inline-block;
+   
+}
+.main{
+
+    margin-right: 10px;
+    height: 200px;
+    float: left; /*se movio el texto a lado de la inmagen*/
+}
+
+.parrafo{
+    text-align: justify;
+}
+
+@media(max-width:1600px){
+    th{
+        display: table-cell;
+        
+    }
+    td{
+        width: auto;
+        display: table-cell;
+    }
+    td:nth-of-type(1){
+        font-size: 1em;
+    }
+    .content{
+        padding: 1.8em; 
+    }
+
+}
+@media (max-height:550px){
+    .content{
+        height: 500px;
+    }
+}
+
+/*
+    azul::#235C75
+    
+*/
